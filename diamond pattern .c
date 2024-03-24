@@ -1,29 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h> // For abs() function
-
-int main() {
-    int rows = 5;
-    int i, j, space;
-
-    for (i = 1; i <= rows; ++i) {
-        for (space = 1; space <= rows - i; ++space)
-            printf(" ");
-
-        for (j = 1; j <= 2 * i - 1; ++j)
-            printf("*");
-
-        printf("\n");
-    }
-
-    for (i = rows - 1; i >= 1; --i) {
-        for (space = 1; space <= rows - i; ++space)
-            printf(" ");
-
-        for (j = 1; j <= 2 * i - 1; ++j)
-            printf("*");
-
-        printf("\n");
-    }
-
-    return 0;
+ #include <stdio.h> 
+int main() 
+{ 
+int n = 5,i,j,k,comp; 
+for ( i = 0; i < 2 * n - 1; i++) 
+{ 
+if (i < n)
+{ 
+comp = 2 * (n - i) - 1; 
+} 
+else 
+{ 
+comp = 2 * (i - n + 1) + 1; 
+} 
+for ( j = 0; j < comp; j++) 
+{ 
+printf(" "); 
+} 
+for ( k = 0; k < 2 * n - comp; k++) 
+{ 
+printf("* "); 
+} 
+printf("\n"); 
+} 
+return 0; 
 }
