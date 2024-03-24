@@ -1,22 +1,21 @@
 #include<stdio.h>
 int main()
 {
-	int num=153,ori,rem,result=0;
-	ori=num;
-	while(ori!=0)
+	int num=153,original_num,remainder,result =0;
+	original_num=num;
+	while(original_num!=0)
 	{
-		rem=ori%10;
-		result+=rem*rem*rem;
-		ori/=10;
-		
+		remainder=original_num%10;
+		result+=remainder*remainder*remainder;
+		original_num/=10;
 	}
-	if (result==num)
+	if(result==num)
 	{
-		printf("%d is a armstrong",num);
+		printf("%d is an armstrong number",num);
 	}
 	else
 	{
-		printf("%d is not a armstrong ",num);
+		printf("%d is not an armstrong number",num);
 	}
 	return 0;
 }
