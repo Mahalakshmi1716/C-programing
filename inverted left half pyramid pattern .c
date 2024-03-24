@@ -1,14 +1,18 @@
-#include <stdio.h>
-
-int main() {
-    int rows = 5;
-
-    for (int i = 1; i <= rows; ++i) {
-        for (int j = rows; j >= i; --j) {
-            printf("* ");
-        }
-        printf("\n");
-    }
-
-    return 0;
+#include<stdio.h>
+int main()
+{
+int rows=5,i,j,k;
+for(i=0;i<=rows;i++)
+{
+for(j=0;j<2*i;j++)
+{
+printf(" ");
+}
+for(k=0;k<=rows-i;k++)
+{
+printf("* ");
+}
+printf("\n");
+}
+return 0;
 }
