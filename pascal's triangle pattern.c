@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-int main() {
-    int rows = 5;
-    int coef = 1;
-
-    for (int i = 0; i < rows; i++) {
-        for (int space = 1; space <= rows - i; space++)
+int main() 
+{
+    int n = 5,c=1,i,j,k;
+	for (i = 0; i < n; i++)
+	 {
+        for (k= 1;k <= n- i;k++)
             printf("  "); 
-
-        for (int j = 0; j <= i; j++) {
+		for (j = 0; j <= i; j++)
+		 {
             if (j == 0 || i == 0)
-                coef = 1;
+                c = 1;
             else
-                coef = coef * (i - j + 1) / j;
-
-            printf("%4d", coef); 
+                c = c* (i - j + 1) / j;
+			printf("%4d", c); 
         }
         printf("\n");
     }
